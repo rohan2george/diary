@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Diary{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'diary/styles.css' %}" rel="stylesheet">
+        <script src="{% static 'diary/index.js' %}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+    </head>
+    <body>
+            {% if user.is_authenticated %}
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <h2>{{ user.username }}</h2>
+          
+            <div>
+              <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="new_entry">New Diary Entry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="view_entry">Diary Entries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="reminder">New Reminders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="view_reminder">Reminders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="shared">New Shared Diary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="all_shared">Shared Diaries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                    </li>
+
+              </ul>
+            </div>
+          </nav>
+            {% endif %}
+        <div class="body">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

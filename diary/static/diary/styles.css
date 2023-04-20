@@ -1,0 +1,59 @@
+.error{
+	color: red;
+}
+.column {
+	border-top: solid;
+  border-right: solid;
+	width:600px;
+}
+.welcome-here{
+	padding: 70px 0;
+	width:600px;
+    height:500px;
+    margin-right:10px;
+    float:left;
+}
+.register-here{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+.register-size{
+	width:500px;
+    height:500px;
+  	border-style: outset;
+  	border-color: grey;
+  	border-width: 5px;
+}
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+.ed_button{
+  display:inline-block;
+}
+#welcome{
+	width:600px;
+    height:500px;
+  	padding: 70px 0;
+  	float: left;
+  	margin-right: 5px;
+}
+#login-here{
+	width:600px;
+    height:400px;
+  	border-style: outset;
+  	border-color: grey;
+  	border-width: 5px;
+}
+#edit{
+  position :relative;
+}
+#delete{
+  position :relative;
+  top: 0px;
+  right: -407px;
+}
